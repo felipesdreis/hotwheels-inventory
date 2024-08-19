@@ -1,0 +1,7 @@
+{
+  "name": "hotwheels-inventory",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Hot Wheels Inventory
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let car of cars">
+      <ion-thumbnail slot="start">
+        <img [src]="car.imageUrl" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ car.name }}</h2>
+        <p>{{ car.model }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  
+  <!-- Input para selecionar arquivo -->
+  <input type="file" (change)="onFileSelected($event)" />
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addCar()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
